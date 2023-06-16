@@ -13,11 +13,12 @@ int Prompt (string message)
 
 bool True (int numb)
 {
-    if (numb > 7){
-        System.Console.Write($"Вашего дня недели: {numb} не существует");
-        return false;
+    if (numb <= 7 && numb > 0){
+        return true;
     }
-    return true;
+    System.Console.Write($"Вашего дня недели: {numb} не существует");
+    return false;
+
 }
 
 void Day (int num)
